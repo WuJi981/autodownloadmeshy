@@ -1,0 +1,49 @@
+{
+  "_comment": "autodownloadmeshy 默认配置，来自用户 2026-11-10 提供的两张面板截图；2026-11-17 实战后修正多视图为会员项禁点。其他 AI 可直接读此文件，也可由用户在对话里覆盖任意字段。",
+  "site": "https://meshy.cn/workspace",
+  "imagePath": "",
+  "settings": {
+    "tab": "高细节",
+    "aiModel": "Meshy 7.1 - Flagship 最多细节，最高精度",
+    "multiView": {
+      "enabled": false,
+      "clickForbidden": true,
+      "reason": "点它会弹「订阅以使用多视角」，属会员功能；保持页面默认关闭，绝不点击"
+    },
+    "resolution": "标准",
+    "split": false,
+    "texture": true,
+    "model": "Meshy 7",
+    "textureResolution": "2K",
+    "pose": {
+      "enabled": false,
+      "clickForbidden": true,
+      "reason": "姿势开关点了会要求开会员，必须保持页面默认关闭状态，绝不点击"
+    },
+    "imageEnhance": true,
+    "license": "CC BY 4.0",
+    "estimatedCredits": 30,
+    "estimatedMinutes": 2
+  },
+  "generation": {
+    "creditsRequired": 30,
+    "waitTimeoutMs": 600000,
+    "pollIntervalMs": 5000,
+    "autoOpenResult": true,
+    "preferTexturedTask": true,
+    "_note": "一次生成会产出两个任务：result.generate（白模）+ result.texture（带贴图）。preferTexturedTask=true 时取带贴图那个。"
+  },
+  "output": {
+    "format": "blend",
+    "outputDir": "",
+    "keepGlbBackup": false,
+    "preview": true
+  },
+  "runtime": {
+    "cdpPort": 9222,
+    "chromeProfileDir": "",
+    "downloadDir": "",
+    "startChromeDetached": true,
+    "_note": "startChromeDetached=true 时用 WMI Win32_Process.Create 启动 Chrome，避免父任务结束后进程树被回收（会丢 9222）。"
+  }
+}
